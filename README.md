@@ -253,7 +253,3 @@ Generates three unique random seats and stores the voucher in the database.
   This prevents duplicate voucher assignments, even if multiple requests are submitted simultaneously (race condition).
 
 ---
-
-# License
-
-This project was created as a technical assessment and is intended for educational purposes.
