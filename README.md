@@ -79,20 +79,15 @@ touch database/database.sqlite
 
 ### 6. Configure the database
 
-Update the following values inside `.env`:
+Open the `.env` file and update the SQLite configuration.
+
+Leave the `DB_DATABASE` value empty and comment it out, as Laravel will automatically use the default SQLite database file located at `database/database.sqlite`.
 
 ```env
 DB_CONNECTION=sqlite
-DB_DATABASE=/absolute/path/to/backend/database/database.sqlite
+
+# DB_DATABASE=
 ```
-
-Example:
-
-```text
-/Users/your-name/project/backend/database/database.sqlite
-```
-
-Replace the example path with the absolute path on your own machine.
 
 ### 7. Run database migrations
 
