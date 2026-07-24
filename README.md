@@ -167,12 +167,18 @@ http://localhost:5173
    - Flight Date
    - Aircraft Type
 
+   <img width="706" height="613" alt="Fill in" src="https://github.com/user-attachments/assets/7f42c88c-ccb1-4f7b-ae41-486437f4866f" />
+
 2. Click **Generate Vouchers**.
+
+<img width="1155" height="913" alt="Generate" src="https://github.com/user-attachments/assets/3be96148-7bfd-4afc-95e5-abe2ba7b13c9" />
 
 3. The application will:
    - Check whether a voucher already exists for the specified flight number and date.
    - Generate **three unique random seats** if no voucher exists.
    - Display an error message if a voucher has already been generated.
+
+   <img width="891" height="693" alt="Error" src="https://github.com/user-attachments/assets/e20f17e8-d0da-45cc-8b8b-256100a8e61a" />
 
 ---
 
