@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('seat3');
             $table->timestamps();
 
-            // Bonus point: unique constraint biar 1 flight+date cuma bisa 1 voucher assignment
+            // unique constraint biar 1 flight+date cuma bisa 1 voucher assignment
             $table->unique(['flight_number', 'flight_date']);
         });
     }
