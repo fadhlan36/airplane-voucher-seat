@@ -16,7 +16,7 @@ A web application for randomly generating airline seat vouchers as part of a pro
 
 ### Backend
 
-- Laravel 11 (PHP)
+- Laravel 12 (PHP)
 
 ### Database
 
