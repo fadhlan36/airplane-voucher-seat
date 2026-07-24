@@ -2,6 +2,10 @@
 
 A web application for randomly generating airline seat vouchers as part of a promotional campaign. Crew members can enter flight information, and the system will generate **three unique random seats** based on the selected aircraft's seating layout.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3be96148-7bfd-4afc-95e5-abe2ba7b13c9" alt="App Preview" width="700" style="border-radius: 12px; border: 1px solid #e2e8f0;" />
+</p>
+
 ---
 
 ## Tech Stack
@@ -48,7 +52,7 @@ Before running the project, make sure the following software is installed:
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/fadhlan36/airplane-voucher-seat.git
+git clone [https://github.com/fadhlan36/airplane-voucher-seat.git](https://github.com/fadhlan36/airplane-voucher-seat.git)
 cd airplane-voucher-seat
 ```
 
@@ -112,8 +116,8 @@ php artisan serve
 
 The backend will be available at:
 
-```
-http://127.0.0.1:8000
+```text
+[http://127.0.0.1:8000](http://127.0.0.1:8000)
 ```
 
 ---
@@ -141,7 +145,7 @@ cp .env.example .env
 Update the API URL:
 
 ```env
-VITE_API_BASE_URL=http://127.0.0.1:8000/api
+VITE_API_BASE_URL=[http://127.0.0.1:8000/api](http://127.0.0.1:8000/api)
 ```
 
 ### 4. Start the development server
@@ -152,7 +156,7 @@ npm run dev
 
 Open the URL displayed in the terminal (usually):
 
-```
+```text
 http://localhost:5173
 ```
 
@@ -160,25 +164,31 @@ http://localhost:5173
 
 # Usage
 
-1. Fill in the following information:
+1. **Fill in the flight & crew information:**
    - Crew Name
    - Crew ID
    - Flight Number
    - Flight Date
    - Aircraft Type
 
-   <img width="706" height="613" alt="Fill in" src="https://github.com/user-attachments/assets/7f42c88c-ccb1-4f7b-ae41-486437f4866f" />
+   <p align="center">
+     <img src="https://github.com/user-attachments/assets/7f42c88c-ccb1-4f7b-ae41-486437f4866f" alt="Fill in form" width="600" style="border-radius: 8px;" />
+   </p>
 
-2. Click **Generate Vouchers**.
+2. **Click "Generate Vouchers":**
 
-<img width="1155" height="913" alt="Generate" src="https://github.com/user-attachments/assets/3be96148-7bfd-4afc-95e5-abe2ba7b13c9" />
+   <p align="center">
+     <img src="https://github.com/user-attachments/assets/3be96148-7bfd-4afc-95e5-abe2ba7b13c9" alt="Generated Vouchers" width="600" style="border-radius: 8px;" />
+   </p>
 
-3. The application will:
-   - Check whether a voucher already exists for the specified flight number and date.
-   - Generate **three unique random seats** if no voucher exists.
-   - Display an error message if a voucher has already been generated.
+3. **Application Behavior:**
+   - Checks whether a voucher already exists for the specified flight number and date.
+   - Generates **three unique random seats** if no voucher exists.
+   - Displays an error message if a voucher has already been generated for that specific flight and date.
 
-   <img width="891" height="693" alt="Error" src="https://github.com/user-attachments/assets/e20f17e8-d0da-45cc-8b8b-256100a8e61a" />
+   <p align="center">
+     <img src="https://github.com/user-attachments/assets/e20f17e8-d0da-45cc-8b8b-256100a8e61a" alt="Error validation" width="600" style="border-radius: 8px;" />
+   </p>
 
 ---
 
@@ -251,9 +261,9 @@ Generates three unique random seats and stores the voucher in the database.
 
 | Aircraft Type | Row Range | Seat Columns |
 |---------------|----------:|--------------|
-| ATR | 1–18 | A, C, D, F |
-| Airbus 320 | 1–32 | A, B, C, D, E, F |
-| Boeing 737 Max | 1–32 | A, B, C, D, E, F |
+| **ATR** | 1–18 | A, C, D, F |
+| **Airbus 320** | 1–32 | A, B, C, D, E, F |
+| **Boeing 737 Max** | 1–32 | A, B, C, D, E, F |
 
 ---
 
@@ -261,10 +271,4 @@ Generates three unique random seats and stores the voucher in the database.
 
 - Backend validation is handled using **Laravel Form Request** classes.
 - Seat generation logic is implemented in `App\Services\SeatGeneratorService`.
-- A database-level **unique constraint** is applied to the combination of:
-  - `flight_number`
-  - `flight_date`
-
-  This prevents duplicate voucher assignments, even if multiple requests are submitted simultaneously (race condition).
-
----
+- A database-level **unique constraint** is applied to the combination of `flight_number` and `flight_date`. This prevents duplicate voucher assignments, even if multiple requests are submitted simultaneously (race condition).
